@@ -1,0 +1,1 @@
+-- vyber všechny dokončené objednávky společně se jménem zákazníka, seřazené podle data vzestupně a poté podle jména zákazníka

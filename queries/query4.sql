@@ -1,0 +1,1 @@
+-- vyber všechny kategorie, které obsahují aspoň 2 produkty

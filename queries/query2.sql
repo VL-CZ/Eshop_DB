@@ -1,0 +1,1 @@
+-- vyber všechny produkty, které si nikdo nekoupil (tzn. nejsou v žádné objednávce)
