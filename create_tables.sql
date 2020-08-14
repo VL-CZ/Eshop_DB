@@ -1,0 +1,32 @@
+CREATE TABLE Category (
+	Id INTEGER IDENTITY(1,1) PRIMARY KEY,
+    Name VARCHAR(255)
+);
+
+CREATE TABLE Product(
+    Id INTEGER IDENTITY(1,1) PRIMARY KEY,
+    Name VARCHAR(255),
+    Description VARCHAR(MAX),
+    Price INTEGER,
+    Available BIT,
+    IdCategory INTEGER FOREIGN KEY REFERENCES Category(Id)
+)
+
+CREATE TABLE Customer(
+    Id INTEGER IDENTITY(1,1) PRIMARY KEY,
+    Name VARCHAR(255),
+    Email VARCHAR(255),
+    Address VARCHAR(255)
+);
+
+CREATE TABLE dbo.[Order](
+    Id INTEGER IDENTITY(1,1) PRIMARY KEY,
+    Status VARCHAR(255),
+    Date DATE,
+    IdCustomer INTEGER FOREIGN KEY REFERENCES Customer(Id)
+);
+
+CREATE TABLE ProductOrder(
+    IdProduct INTEGER FOREIGN KEY REFERENCES Product(Id),
+    IdOrder INTEGER FOREIGN KEY REFERENCES [Order](Id),
+);
