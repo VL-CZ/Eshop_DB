@@ -1,12 +1,12 @@
 CREATE TABLE Category (
 	Id INTEGER IDENTITY(1,1) PRIMARY KEY,
-    Name VARCHAR(255)
+    Name NVARCHAR(255)
 );
 
 CREATE TABLE Product(
     Id INTEGER IDENTITY(1,1) PRIMARY KEY,
-    Name VARCHAR(255),
-    Description VARCHAR(MAX),
+    Name NVARCHAR(255),
+    Description NVARCHAR(MAX),
     Price INTEGER,
     Available BIT,
     IdCategory INTEGER FOREIGN KEY REFERENCES Category(Id)
@@ -14,14 +14,14 @@ CREATE TABLE Product(
 
 CREATE TABLE Customer(
     Id INTEGER IDENTITY(1,1) PRIMARY KEY,
-    Name VARCHAR(255),
-    Email VARCHAR(255),
-    Address VARCHAR(255)
+    Name NVARCHAR(255),
+    Email NVARCHAR(255),
+    Address NVARCHAR(255)
 );
 
 CREATE TABLE [Order](
     Id INTEGER IDENTITY(1,1) PRIMARY KEY,
-    Status VARCHAR(255),
+    Status NVARCHAR(255),
     Date DATE,
     IdCustomer INTEGER FOREIGN KEY REFERENCES Customer(Id)
 );
