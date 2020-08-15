@@ -19,7 +19,7 @@ CREATE TABLE Customer(
     Address VARCHAR(255)
 );
 
-CREATE TABLE dbo.[Order](
+CREATE TABLE [Order](
     Id INTEGER IDENTITY(1,1) PRIMARY KEY,
     Status VARCHAR(255),
     Date DATE,
