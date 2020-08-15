@@ -10,3 +10,5 @@ VALUES
 INSERT INTO ProductOrder(IdOrder,IdProduct) -- vložení hodnot do vazební tabulky
 VALUES 
 (SCOPE_IDENTITY(),@idProduct);
+
+-- USAGE: EXEC AddNewOrderWithOneItem 3,1;
