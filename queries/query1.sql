@@ -4,4 +4,5 @@ SELECT c.Name AS 'Category', p.Name AS 'Product Name', p.Price
 FROM Product p
 INNER JOIN Category c
 ON c.Id = p.IdCategory
+WHERE p.Available=1
 ORDER BY p.Price, p.Name
